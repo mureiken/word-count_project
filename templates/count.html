@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>Word Count Project - Count</title>
+  </head>
+  <body>
+    <h1>Word Count</h1>
+    <a href="{% url 'about' %}">About </a><br />
+    <h2>The length of your text is {{ count }}</h2>
+    <h3>Your text</h3>
+    <p>{{fulltext}}</p>
+    <h3>Word dictionary</h3>
+    <p>{% for word,counttotal in worddictionary %}</p>
+    {{ word }}
+    <br />
+    {{ counttotal }}
+    {% endfor %}
+  </body>
+</html>
